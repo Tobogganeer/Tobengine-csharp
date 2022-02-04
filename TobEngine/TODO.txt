@@ -1,0 +1,38 @@
+﻿
+Entity Component pattern
+
+ENTITIES (GAMEOBJECT, A UNIQUE ID)
+{
+unique ID
+bool TryGetComponent<T>(out T Component)
+Transform transform
+
+list<Component> components
+}
+
+COMPONENTS (ATTACHABLE TO ENTITIES)
+{
+transform
+camera
+meshrenderer
+meshfilter
+}
+
+
+
+
+//COMPONENTS (JUST HOLD DATA)
+//{
+//transform
+//camera
+//meshrenderer
+//meshfilter
+//}
+//
+//SYSTEMS (HAS UPDATE FUNCTION, PERFORMS ACTIONS ON ENTITIES USING DATA FROM COMPONENTS)
+//{
+//Rendering
+//Collisions
+//for example, a system might update the positions of all moving entities
+// by their velocity times the time interval since the previous frame.
+//}
